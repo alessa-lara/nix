@@ -5,8 +5,8 @@ let
         quickshell
         noctalia-shell
         pavucontrol
-        eom
-        evince
+        eom # image viewer
+        evince # document viewer
         nautilus # file manager
         nautilus-open-any-terminal
         celluloid
@@ -20,6 +20,7 @@ let
         xwayland-satellite
         gearlever # appimage integration
         file-roller # archive manager
+        orchis-theme # gtk theme
     ];
 
     dev = with pkgs; [
