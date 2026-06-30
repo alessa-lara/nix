@@ -7,7 +7,7 @@ let
         pavucontrol
         eom
         evince
-        nautilus
+        nautilus # file manager
         nautilus-open-any-terminal
         celluloid
         htop
@@ -18,7 +18,8 @@ let
         brightnessctl
         unzip
         xwayland-satellite
-        fuse # for appimages
+        gearlever # appimage integration
+        file-roller # archive manager
     ];
 
     dev = with pkgs; [
@@ -34,6 +35,10 @@ let
         rustfmt
         rust-analyzer
         clang-tools
+        asm-lsp
+        direnv # auto dev shell activation
+        pyright
+        svelte-language-server
     ];
 
     user = with pkgs; [

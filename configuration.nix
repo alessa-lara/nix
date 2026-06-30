@@ -1,10 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  # enable nix flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -49,15 +47,6 @@
   services.displayManager.ly.enable = true;
   services.desktopManager.gnome.enable = true;
   programs.niri.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "br";
-    variant = "";
-  };
-
-  # Configure console keymap
-  console.keyMap = "br-abnt2";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -112,9 +101,9 @@
     "electron-39.8.10" # for bitwarden
   ];
 
+  programs.appimage.enable = true; # appimage support
   programs.nix-ld.enable = true; # dynamic executables support
   programs.nix-ld.libraries = with pkgs; [
-    # Add any missing dynamic libraries for unpackaged programs here
   ];
 
   system.stateVersion = "26.05";
