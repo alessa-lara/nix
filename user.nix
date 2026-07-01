@@ -21,25 +21,13 @@ let
         gearlever # appimage integration
         file-roller # archive manager
         orchis-theme # gtk theme
+        lxappearance
     ];
 
     dev = with pkgs; [
-        git
-        python3
-        ruff # python linter
-        pyright 
-        gcc
         fd # fuzzy finder nvim
         tree-sitter # nvim parser
-        cargo
-        rustc
-        rustfmt
-        rust-analyzer
-        clang-tools
-        asm-lsp
         direnv # auto dev shell activation
-        pyright
-        svelte-language-server
     ];
 
     user = with pkgs; [
@@ -56,9 +44,13 @@ let
     ];
 
 in {
+    imports = [./modules/programming.nix];
+
     home.packages = session ++ dev ++ user;
 
+
     programs.git = {
+        enable = true;
         settings = {
             user = {
                 name  = "Alessa Lara";
