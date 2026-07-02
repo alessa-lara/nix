@@ -20,8 +20,9 @@ let
         xwayland-satellite
         gearlever # appimage integration
         file-roller # archive manager
-        orchis-theme # gtk theme
-        lxappearance
+        yaru-remix-theme
+        ant-nebula-theme
+        nwg-look
     ];
 
     dev = with pkgs; [

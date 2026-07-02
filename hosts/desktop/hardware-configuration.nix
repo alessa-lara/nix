@@ -24,6 +24,35 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
+  fileSystems."/home/lara/data" =
+    { device = "/dev/disk/by-uuid/6e0753d6-9bbc-4183-b998-f2fb56adaf13";
+      fsType = "xfs";
+    };
+
+  fileSystems."/home/lara/Documents" =
+    { device = "/home/lara/data/Documents";
+      fsType = "none";
+      options = [ "bind" ];
+    };
+
+  fileSystems."/home/lara/Projects" =
+    { device = "/home/lara/data/Projects";
+      fsType = "none";
+      options = [ "bind" ];
+    };
+
+  fileSystems."/home/lara/Media" =
+    { device = "/home/lara/data/Media";
+      fsType = "none";
+      options = [ "bind" ];
+    };
+
+  fileSystems."/home/lara/Downloads" =
+    { device = "/home/lara/data/Downloads";
+      fsType = "none";
+      options = [ "bind" ];
+    };
+
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
