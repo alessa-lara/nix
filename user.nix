@@ -7,21 +7,19 @@ let
         pavucontrol
         eom # image viewer
         evince # document viewer
-        nautilus # file manager
-        nautilus-open-any-terminal
+        caja-with-extensions # file manager
         celluloid
         htop
         ffmpeg-full
         stow
         rofi
-        adwaita-icon-theme
         brightnessctl
         unzip
         xwayland-satellite
         gearlever # appimage integration
         file-roller # archive manager
         yaru-remix-theme
-        ant-nebula-theme
+        papirus-icon-theme
         nwg-look
     ];
 

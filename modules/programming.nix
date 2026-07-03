@@ -2,10 +2,10 @@
 
 let
     python = with pkgs; [
-        python3
-        ruff # python linter
-        pyright
-
+        python314
+        python314Packages.ruff # python linter
+        python314Packages.uv # python linter
+        basedpyright
     ];
 
     c_cpp = with pkgs; [
