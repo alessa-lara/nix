@@ -29,30 +29,6 @@
       fsType = "xfs";
     };
 
-  fileSystems."/home/lara/Documents" =
-    { device = "/home/lara/data/Documents";
-      fsType = "none";
-      options = [ "bind" ];
-    };
-
-  fileSystems."/home/lara/Projects" =
-    { device = "/home/lara/data/Projects";
-      fsType = "none";
-      options = [ "bind" ];
-    };
-
-  fileSystems."/home/lara/Media" =
-    { device = "/home/lara/data/Media";
-      fsType = "none";
-      options = [ "bind" ];
-    };
-
-  fileSystems."/home/lara/Downloads" =
-    { device = "/home/lara/data/Downloads";
-      fsType = "none";
-      options = [ "bind" ];
-    };
-
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
